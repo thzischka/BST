@@ -6,9 +6,9 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories(Prompt)
 
 add_executable(program3
-        Prompt/BST.cpp
-        Prompt/BST.h
-        Prompt/BSTSanityCheck.cxx
-        Prompt/CreateData.cxx
-        Prompt/json.hpp
-        Prompt/Makefile)
+        BST.cpp
+        BST.h
+        BSTSanityCheck.cxx
+        CreateData.cxx
+        json.hpp
+        Makefile)
