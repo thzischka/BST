@@ -11,4 +11,4 @@ add_executable(program3
         BSTSanityCheck.cxx
         CreateData.cxx
         json.hpp
-        Makefile)
+        Makefile AVL.cpp AVL.h)
