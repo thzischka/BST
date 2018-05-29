@@ -28,8 +28,16 @@ bool BSTNode::HasLeftChild() const {
 	return left_ != nullptr;
 }
 
+std::shared_ptr<BSTNode> BSTNode :: getLeft() {
+    return left_;
+}
+
 bool BSTNode::HasRightChild() const {
 	return right_ != nullptr;
+}
+
+std::shared_ptr<BSTNode> BSTNode :: getRight() {
+    return right_;
 }
 
 void BSTNode::DeleteChild(std::shared_ptr<BSTNode> v) {
@@ -58,6 +66,28 @@ void BSTNode::ReplaceChild(std::shared_ptr<BSTNode> v, std::shared_ptr<BSTNode> 
 		exit(EXIT_FAILURE);
 	}
 }
+
+std::weak_ptr<BSTNode> BSTNode :: getParent(){
+    return parent_;
+}
+void BSTNode :: setParent(std::weak_ptr<BSTNode> newParent){
+    parent_ = newParent;
+}
+
+void BSTNode :: setHeight(int height) {
+    height_ = height;
+}
+int BSTNode :: getHeight() {
+    return height_;
+}
+
+void BSTNode ::  setBalance(int Balance){
+    balance_ = Balance;
+}
+int BSTNode ::  getBalance(){
+    return balance_;
+}
+
 
 BST::BST() : root_(nullptr), size_(0) {}
 
@@ -177,6 +207,10 @@ bool BST::Find(int key) const {
 			currentNode->left_ : currentNode->right_;
 	}
 	return false;
+}
+
+std::shared_ptr<BSTNode> BST :: root(){
+	return root_;
 }
 
 std::string BST::JSON() const {

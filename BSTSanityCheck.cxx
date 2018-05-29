@@ -7,7 +7,7 @@
 #include "BST.h"
 
 #define SAMPLE_SIZE 1000
-#define NUM_TESTS 10000
+#define NUM_TESTS 10
 
 int main() {
 

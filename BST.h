@@ -13,12 +13,24 @@ class BSTNode {
  	bool HasRightChild() const;
  	void DeleteChild(std::shared_ptr<BSTNode> v);
  	void ReplaceChild(std::shared_ptr<BSTNode> v, std::shared_ptr<BSTNode> u);
+    std::shared_ptr<BSTNode> getLeft();
+ 	std::shared_ptr<BSTNode> getRight();
+ 	std::weak_ptr<BSTNode> getParent();
+ 	void setParent(std::weak_ptr<BSTNode> newParent);
+ 	void setHeight(int height);
+ 	int getHeight();
+ 	void setBalance(int Balance);
+ 	int getBalance();
+
 
  private:
   int key_;
+  int height_;
+  int balance_;
   std::weak_ptr<BSTNode> parent_;
   std::shared_ptr<BSTNode> left_;
   std::shared_ptr<BSTNode> right_;
+
 
   friend BST;
 }; // class BSTNode
@@ -34,6 +46,8 @@ class BST {
  	size_t size() const;
  	bool empty() const;
  	int DeleteMin();
+
+ 	std::shared_ptr<BSTNode> root();
 
  private:
 	void DeleteLeaf(std::shared_ptr<BSTNode> currentNode);

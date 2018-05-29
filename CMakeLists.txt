@@ -8,7 +8,7 @@ include_directories(Prompt)
 add_executable(program3
         BST.cpp
         BST.h
-        BSTSanityCheck.cxx
+        #BSTSanityCheck.cxx
         CreateData.cxx
         json.hpp
-        Makefile AVL.cpp AVL.h)
+        Makefile AVL.cpp AVL.h AVL.cpp AVL.h AVLCommands.cxx)
